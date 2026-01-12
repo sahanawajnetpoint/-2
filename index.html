@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>বাংলা সাহিত্য ভুবন</title>
+
+  <!-- Google Font (Bangla) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-flex">
+      <div class="brand">
+        <h1>বাংলা সাহিত্য ভুবন</h1>
+        <p>কবিতা | গল্প | সাহিত্য — প্রতিদিন নতুন লেখা</p>
+      </div>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-wrap">
+      <a class="nav-link active" href="#" data-category="home">Home</a>
+      <a class="nav-link" href="#" data-category="kobita">কবিতা</a>
+      <a class="nav-link" href="#" data-category="golpo">গল্প</a>
+      <a class="nav-link" href="#" data-category="onugolpo">অণুগল্প</a>
+      <a class="nav-link" href="#" data-category="guccho">গুচ্ছ কবিতা</a>
+      <a class="nav-link" href="#" data-category="onubad">অনুবাদ সাহিত্য</a>
+      <a class="nav-link" href="#" data-category="dirgho">দীর্ঘ কবিতা</a>
+      <a class="nav-link" href="#" data-category="uponnash">ধারাবাহিক উপন্যাস</a>
+      <a class="nav-link" href="#" data-category="nijosswo">নিজস্ব কলমে</a>
+      <a class="nav-link" href="#" data-category="probondho">প্রবন্ধ</a>
+      <a class="nav-link" href="#" data-category="protidin">প্রাত্যহিক কবিতা</a>
+      <a class="nav-link" href="#" data-category="bishesh">বিশেষ রচনা</a>
+      <a class="nav-link" href="#" data-category="review">বুক রিভিউ</a>
+      <a class="nav-link" href="#" data-category="contact">যোগাযোগ</a>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="container main-grid">
+    <!-- Left -->
+    <section class="content">
+      <div class="section-head">
+        <h2 id="pageTitle">Home</h2>
+        <p id="pageSubtitle">সাহিত্যের জন্য একটি নির্মল আবাস।</p>
+      </div>
+
+      <!-- List -->
+      <div id="posts" class="posts"></div>
+    </section>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <h3>খোঁজ করুন</h3>
+        <input type="text" id="searchInput" placeholder="শিরোনাম / লেখক খুঁজুন..." />
+      </div>
+
+      <div class="card">
+        <h3>আজকের নির্বাচিত</h3>
+        <div id="featured"></div>
+      </div>
+
+      <div class="card">
+        <h3>সাম্প্রতিক লেখা</h3>
+        <div id="recent"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© <span id="year"></span> বাংলা সাহিত্য ভুবন — সর্বস্বত্ব সংরক্ষিত</p>
+      <p class="small">Daily update • কবিতা ও গল্পের ঠিকানা</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModal">✕</button>
+      <h2 id="modalTitle"></h2>
+      <p class="meta" id="modalMeta"></p>
+      <hr />
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
